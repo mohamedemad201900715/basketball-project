@@ -209,13 +209,17 @@ body.Exam-page .container{
 .hold-instruction{
     height: 13rem;
 }
+.holder2 img{
+    width: 34%;
+}
 .holder2 img,
 .holder2 video{
-    width: 45%;
+    max-width: 45%;
     border: 1px solid white;
     height: 100%;
     border-radius: 7px;
 }
+
 .instruction-text{
     padding: 10px 20px;
     border-radius: 7px;
