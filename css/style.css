@@ -102,7 +102,12 @@ body.home-page{
 }
 .holder img{
     height: 9rem;
-
+}
+.image h1{
+    background-color: #6f6868;
+    color: white;
+    padding: 10px;
+    border-radius: 7px;
 }
 /* start corse */
 body.basket-page{
@@ -165,11 +170,9 @@ body.Exam-page{
 body.Exam-page .container{
     min-height: 75vh;
 }
-.Exam-page .toast{
-    direction: ltr;
-}
 
-.Exam-page .holder2{
+
+.holder2{
     color: white;
     border: 3px solid gray;
     border-radius: 8px;
@@ -177,14 +180,16 @@ body.Exam-page .container{
     
 }
 .choice-hold{
-    font-size: 145%;
+    /* font-size: 145%; */
+    position: relative;
     padding: 10px 20px;
     border-radius: 30px;
     background-color: rgb(233,189,93);
-    width: 43%;
+    width: 43% !important;
     color: white;
     cursor: pointer;
     user-select: none;
+    font-size: 130%;
 }
 .choice-hold input{
     width: 25%;
@@ -197,4 +202,48 @@ body.Exam-page .container{
 
 .choice-hold.selected {
     background-color: #e0e0e0; /* Change the background color when selected */
+}
+
+
+/* instructions */
+.hold-instruction{
+    height: 13rem;
+}
+.holder2 img,
+.holder2 video{
+    width: 45%;
+    border: 1px solid white;
+    height: 100%;
+    border-radius: 7px;
+}
+.instruction-text{
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: rgba(158, 142, 142, 0.747);
+    width: 43%;
+    height: auto;
+    color: white;
+    font-size: 130%;
+}
+.instruction-page .holder2{
+    color: white;
+    border: none;
+    border-radius: none;
+    background-color: transparent;
+    /* padding: 0; */
+
+}
+.choice-hold button{
+    width: 100%;
+    border: none;
+    height: 100%;
+    color: white;
+    padding: 16px 10px;
+}
+.list_of_in_structure-page .choice-hold{
+    padding: 0;
+    
+}
+.list_of_in_structure-page button{
+    font-size: larger;
 }
