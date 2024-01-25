@@ -247,3 +247,13 @@ body.Exam-page .container{
 .list_of_in_structure-page button{
     font-size: larger;
 }
+.your-answer{
+    background-color: rgba(158, 142, 142, 0.747);
+    /* padding: 10px; */
+    border-radius: 7px;
+}
+.your-answer p{
+    padding: 4px;
+    margin: 0;
+    font-size: 22px;
+}
