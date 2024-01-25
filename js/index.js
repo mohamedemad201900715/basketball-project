@@ -59,6 +59,7 @@ else{
 }
     answerButton.textContent = "الانتقال للسؤال التالي"
     var newAnchorElement = document.createElement("a");
+    // newAnchorElement.setAttribute("href", "../course.html"); //put link when questions are End
     newAnchorElement.setAttribute("href", "");
     newAnchorElement.appendChild(answerButton);
     answerParagraph.parentNode.appendChild(newAnchorElement);
