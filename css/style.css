@@ -257,3 +257,18 @@ body.Exam-page .container{
     margin: 0;
     font-size: 22px;
 }
+
+body.volley{
+    background-image: url(../assets/volleyball.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 60%;
+    min-height: 100vh;
+}
+
+@media only screen and (max-width: 767px) {
+    body.volley {
+        /* background-size: auto; */
+        background-position: 40% 41%;
+    }
+}
