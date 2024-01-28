@@ -41,22 +41,17 @@ choiceHolds.forEach(choiceHold => {
 // Exam answer
 const answerParagraph = document.querySelector(".your-answer");
 const answerButton = document.querySelector(".btn-answer");
+const radioButtons = document.querySelectorAll('input[type="radio"]');
 let isFirstClick = true;
-answerCorrect= true;
+let correctAnswerId = "choice1"; // Assuming the correct answer is the first choice
+
 answerButton.addEventListener('click', () => {
     if (isFirstClick) {
-    if(answerCorrect){
-    var newElement = document.createElement("p");
-    newElement.textContent = "الاجابه صحيحه";
-    newElement.style.color = 'green'
-    answerParagraph.appendChild(newElement);
-}
-else{
-    var newElement = document.createElement("p");
-    newElement.textContent = "الاجابه خاطئه";
-    newElement.style.color = 'red'
-    answerParagraph.appendChild(newElement);
-}
+        let answerCorrect = Array.from(radioButtons).some(radio => radio.checked && radio.id === correctAnswerId);
+        var newElement = document.createElement("p");
+        newElement.textContent = answerCorrect ? "الاجابه صحيحه" : "الاجابه خاطئه";
+        newElement.style.color = answerCorrect ? 'green' : 'red';
+        answerParagraph.appendChild(newElement);
     answerButton.textContent = "الانتقال للسؤال التالي"
     var newAnchorElement = document.createElement("a");
     // newAnchorElement.setAttribute("href", "../course.html"); //put link when questions are End

@@ -213,7 +213,7 @@ body.Exam-page .container{
     width: 34%;
 }
 .holder2 img,
-.holder2 video{
+.holder2 .myvideo{
     max-width: 45%;
     border: 1px solid white;
     height: 100%;
