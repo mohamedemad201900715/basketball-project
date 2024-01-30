@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exam Volley</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <!-- style sheet broject -->
+        <link rel="stylesheet" href="../../css/style.css">
+        <!-- normalize -->
+        <link rel="stylesheet" href="../../css/normalize.css">
+    </head>
+    <body class="volley">
+
+        <div
+            class="container home h-75 d-flex justify-content-around align-items-center ">
+            <div
+                class="holder w-100 h-100 d-flex flex-column align-items-center justify-content-between  ">
+                <div
+                    class="image d-flex flex-column gap-2   justify-content-center  align-items-center ">
+                    <img src="../../assets/exam.png" alt>
+                </div>
+                <div class="holder2 p-3 mb-3 w-100 d-flex flex-column ">
+                    <h1 class="align-self-start ">السؤال الثامن:</h1>
+                    <p class="align-self-center fs-4  ">في تنطيط الكرات تؤدى المهارة  من الوقوف: إحدى القدمين متقدمة على الأخرى وثقل الجسم 
+ </p>
+                </div>
+                <div class="choices w-100  d-flex flex-column justify-content-between  ">
+                    <div class="d-flex justify-content-around mb-3 ">
+                    <div class="choice-hold d-flex gap-2 align-items-center  justify-content-center ">
+                    <p>موزع على القدمين</p>
+                    <input class="w-25" type="radio" id="choice1" name="choices">
+                </div>
+                <div class="choice-hold Q3 d-flex align-items-center justify-content-center ">
+                    <p>
+                        على القدم الخلفية
+                    </p>
+                    <input class="w-25" type="radio" id="choice2" name="choices">
+                </div>
+                <div class="choice-hold Q3 d-flex align-items-center justify-content-center ">
+                    <p>
+                        على القدم الامامية
+                    </p>
+                    <input class="w-25" type="radio" id="choice3" name="choices">
+                </div>
+            </div>
+                </div>
+                <div class="your-answer mb-3"></div>
+                    <button class="btn btn-answer btn-primary h-50 mb-3  btn-exam">تأكيد الاجابه</button>
+            </div>
+        </div>
+        <div
+            class="home-back h-25 gap-2  d-flex justify-content-around  align-items-center ">
+            <div class="image-back-home">
+                <a href="./Qustion7.html"><img src="../../assets/back-icon.png"
+                        class="Back-icon" alt="Back"></a>
+            </div>
+            <div class="image-back-home  ">
+                <a href="../../index.html"> <img src="../assets/home-icon.svg"
+                        class="Home-icon" alt="Home"></a>
+            </div>
+        </div>
+        <script>
+            
+            // Exam answer
+            const answerParagraph = document.querySelector(".your-answer");
+            const answerButton = document.querySelector(".btn-answer");
+            const radioButtons = document.querySelectorAll('input[type="radio"]');
+            let isFirstClick = true;
+            let correctAnswerId = "choice1"; // Assuming the correct answer is the first choice
+            
+            answerButton.addEventListener('click', () => {
+                if (isFirstClick) {
+                    let answerCorrect = Array.from(radioButtons).some(radio => radio.checked && radio.id === correctAnswerId);
+                    var newElement = document.createElement("p");
+                    newElement.textContent = answerCorrect ? "الاجابه صحيحه" : "الاجابه خاطئه, الاجابه الصحيحه هي (موزع على القدمين)";
+                    newElement.style.color = answerCorrect ? 'green' : 'red';
+                    answerParagraph.appendChild(newElement);
+                answerButton.textContent = "الانتقال للسؤال التالي"
+                var newAnchorElement = document.createElement("a");
+                newAnchorElement.setAttribute("href", "./Qustion9.html"); //put link when questions are End
+                // newAnchorElement.setAttribute("href", "");
+                newAnchorElement.appendChild(answerButton);
+                answerParagraph.parentNode.appendChild(newAnchorElement);
+                isFirstClick= false;
+            }
+            
+            });
+                    </script>
+        <script src="../../js/scrollreveal.min.js"></script>
+        <script src="../../js/popper.min.js"></script>
+        <script src="../../js/jquery-3.7.1.min.js"></script>
+        <script src="../../js/bootstrap.js"></script>
+        <script src="../../js/index.js"></script>
+    </body>
+</html>
