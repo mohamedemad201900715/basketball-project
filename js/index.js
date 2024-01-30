@@ -5,8 +5,8 @@ const sr = ScrollReveal({
     // reset: true
 })
 sr.reveal(` .home .holder .btn`, { delay: 200, origin: 'top' })
-sr.reveal(` .home .holder .image, .holder2 `, { delay: 600, origin: 'top' })
-sr.reveal(`.choice-hold, .image-back-home, .instruction-text`, { delay: 700, origin: 'right' })
+sr.reveal(` .home .holder .image, .holder2 `, { delay: 500, origin: 'top' })
+sr.reveal(`.choice-hold, .image-back-home, .instruction-text`, { delay: 600, origin: 'right' })
 sr.reveal(`.btn-exam`, { delay: 600, origin: 'bottom' })
 
 
