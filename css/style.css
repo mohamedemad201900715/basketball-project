@@ -267,7 +267,7 @@ body.volley{
     background-image: url(../assets/volleyball.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0 60%;
+    background-position: 0 0%;
     min-height: 100vh;
 }
 
@@ -276,4 +276,13 @@ body.volley{
         /* background-size: auto; */
         background-position: 40% 41%;
     }
+}
+
+.intro-page{
+    background-image: url(../assets/home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0%;
+    min-height: 100vh;
+
 }
